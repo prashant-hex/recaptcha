@@ -24,7 +24,7 @@ const Recaptcha = () => {
       })
 
     // axios.post('https://www.google.com/recaptcha/api/siteverify ', {
-    //     secret:'6LccgFAjAAAAAKPjYPn5l2RCA21rMJZHk05GNTBq',
+    //     secret:'',
     //     response:value,
     //     mode:'cors'
     //   })
