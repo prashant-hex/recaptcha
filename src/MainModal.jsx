@@ -1,10 +1,10 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState } from 'react';
 // import React, { Component } from 'react'
 // import Button from 'react-bootstrap/Button';
 // import Modal from 'react-bootstrap/Modal';
 import CaptchaTest from './CaptchaTest';
-import TextCaptcha from './TextCaptcha'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+// import TextCaptcha from './TextCaptcha'
+import { Button, Modal, ModalHeader, ModalBody} from 'reactstrap';
 
 const MainModal = (props) => {
 
@@ -17,7 +17,7 @@ const MainModal = (props) => {
 const isMatched = (data) => {
     console.warn(data);
     setIsmodal(data)
-    if(data == true){
+    if(data === true){
         // console.error("if")
         setModal(false)
     }else{

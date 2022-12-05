@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css'
-import Recaptcha from './Recaptcha';
-import TextCaptcha from './TextCaptcha';
+// import Recaptcha from './Recaptcha';
+// import TextCaptcha from './TextCaptcha';
 import MainModal from './MainModal';
 
 function App() {
