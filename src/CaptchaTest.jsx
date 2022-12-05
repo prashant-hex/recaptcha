@@ -11,13 +11,15 @@ import {
 
 class CaptchaTest extends Component {
 
-  constructor(){
-    super();
+
+  constructor(props){
+    super(props);
     this.state = {
       isVerified:false,
-      matched:true
+      matched:true,
     }
   }
+  
 
   componentDidMount() {
     loadCaptchaEnginge(6);
@@ -30,23 +32,26 @@ class CaptchaTest extends Component {
       // console.log(this.state.isVerified)
       this.setState({isVerified:true, matched:true},()=>{
         console.log(this.state.isVerified)
+        this.props.isVerified(this.state.matched);
       })
       // alert("Captcha Matched");
       loadCaptchaEnginge(6);
       document.getElementById("user_captcha_input").value = "";
       this.setState({isVerified:true},()=>{
-        console.log(this.state.isVerified)
+        // console.log(this.state.isVerified)
       })
     } else {
-      this.setState({isVerified:false,matched:false})
+      this.setState({isVerified:false,matched:false},()=>{
+        this.props.isVerified(this.state.matched);
+      })
       console.log(this.state.isVerified)
       // alert("Captcha Does Not Match");
       document.getElementById("user_captcha_input").value = "";
     }
     this.setState({isVerified:false},()=>{
-      console.log(this.state.isVerified)
+      // console.log(this.state.isVerified)
     })
-
+    
   };
 
   render() {
